@@ -7,3 +7,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:80"
+    depends_on:
+      - redis
+    env_file:
+      - .env
+  redis:
+    container_name: golang_web_app_redis
+    image: redis
+    ports:
+      - "6379:6379"

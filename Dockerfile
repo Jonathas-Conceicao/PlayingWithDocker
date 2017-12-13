@@ -4,7 +4,7 @@ RUN mkdir -p /go/src/app
 WORKDIR /go/src/app
 
 COPY app/ .
-# RUN go get ./...
+RUN go get ./...
 ENV GOPATH=/go
 RUN go install
 
