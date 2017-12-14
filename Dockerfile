@@ -10,4 +10,5 @@ RUN go install
 
 EXPOSE 80
 
+# ENTRYPOINT ["/go/bin/app"]
 CMD ["app"]
